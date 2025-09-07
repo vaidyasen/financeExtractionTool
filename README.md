@@ -4,9 +4,30 @@ This tool is a streamlit based app that uses openai api to extract key financial
 
 ### Installation
 
-```doctest
+```bash
 pip install -r requirements.txt
 ```
 
-You need to create an account on openai website. You will get inital 5$ free credits which is more than enough for this project.
-Once you get an api key from your account add it to secret_key.py
+### Setup
+
+1. You need to create an account on openai website. You will get initial $5 free credits which is more than enough for this project.
+
+2. Once you get an API key from your account, create a `.env` file in the project root directory:
+
+```bash
+cp .env.example .env
+```
+
+3. Edit the `.env` file and add your OpenAI API key:
+
+```
+OPENAI_API_KEY=your_api_key_here
+```
+
+### Running the Application
+
+```bash
+streamlit run main.py
+```
+
+**Note**: Never commit your `.env` file or API keys to version control. The `.env` file is already included in `.gitignore`.
